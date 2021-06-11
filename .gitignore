@@ -1,5 +1,6 @@
 *.jpg
 *.png
+*.svg
 *.pyc
 .idea
 db.sqlite3
