@@ -252,7 +252,7 @@
 						<!-- Destinations -->
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="{% static 'images/destination_1.jpg' %}" alt="">
+								<img src="{{destination.image.url}}" alt="">
                 {% if destination.offer %}
 								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
                 {% endif %}
