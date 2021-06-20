@@ -7,3 +7,6 @@ class Destination(models.Model):
   subtitle = models.TextField()
   price = models.IntegerField()
   offer = models.BooleanField(default = False)
+
+  def __str__(self):
+    return self.title
