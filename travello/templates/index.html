@@ -1,4 +1,5 @@
 {% load static %}
+{% static 'images' as images_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,10 +33,8 @@
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
 									<li class="active"><a href="index.html">Home</a></li>
-									<li><a href="about.html">About us</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="news.html">News</a></li>
 									<li><a href="contact.html">Contact</a></li>
+                  <li><a href="accounts/register">Register</a></li>
 								</ul>
 							</nav>
 							<div class="header_phone ml-auto">Call us: 00-56 445 678 33</div>
@@ -102,7 +101,7 @@
 
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
+					<div class="background_image" style="background-image:url({{images_url}}/home_slider.jpg)"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -118,7 +117,7 @@
 
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
+					<div class="background_image" style="background-image:url({{images_url}}/home_slider.jpg)"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -134,7 +133,7 @@
 
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
+					<div class="background_image" style="background-image:url({{images_url}}/home_slider.jpg)"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -188,7 +187,7 @@
 	<!-- Intro -->
 
 	<div class="intro">
-		<div class="intro_background" style="background-image:url({% static 'images/intro.png' %})"></div>
+		<div class="intro_background" style="background-image:url({{images_url}}/intro.png)"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -409,7 +408,7 @@
 				<!-- News Sidebar -->
 				<div class="col-xl-4">
 					<div class="travello">
-						<div class="background_image" style="background-image:url({% static 'images/travello.jpg' %})"></div>
+						<div class="background_image" style="background-image:url({{images_url}}/travello.jpg)"></div>
 						<div class="travello_content">
 							<div class="travello_content_inner">
 								<div></div>
