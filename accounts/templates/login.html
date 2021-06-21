@@ -5,12 +5,12 @@
 <form action="login" method="POST">
   {% csrf_token %}
   <div class="form-group">
-    <label for="userInput">Username</label>
-    <input type="text" class="form-control" id="userInput" name="username" placeholder="Username"><br>
+    <label for="usenamer_input">Username</label>
+    <input type="text" class="form-control" id="username_input" name="username" placeholder="Username">
   </div>
   <div class="form-group">
-    <label for="passwordInput">Password</label>
-    <input type="password" class="form-control" id="passwordInput" name="password" placeholder="Password"><br>
+    <label for="password_input">Password</label>
+    <input type="password" class="form-control" id="password_input" name="password" placeholder="Password">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

@@ -1,27 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration</title>
-</head>
-<body>
-  <form action="register" method="POST">
-    {% csrf_token %}
-    <input type="text" name="first_name" placeholder="First name"><br>
-    <input type="text" name="last_name" placeholder="Last name"><br>
-    <input type="text" name="username" placeholder="Username"><br>
-    <input type="email" name="email" placeholder="Email"><br>
-    <input type="password" name="password_1" placeholder="Password"><br>
-    <input type="password" name="password_2" placeholder="Confirm password"><br>
-    <input type="submit" value="Submit">
-  </form>
-
-  <div>
-    {% for message in messages %}
-      <h3> {{message}} </h3>
-    {% endfor %}
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<h2 class="text-center">Register</h2>
+<h4 class="text-center">Create your account</h2>
+<form action="login" method="POST">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="first_name_input">First name</label>
+    <input type="text" class="form-control" id="first_name_input" name="first_name" placeholder="First name">
   </div>
-</body>
-</html>
+  <div class="form-group">
+    <label for="last_name_input">Last name</label>
+    <input type="text" class="form-control" id="last_name_input" name="last_name" placeholder="Last name">
+  </div>
+  <div class="form-group">
+    <label for="usenamer_input">Username</label>
+    <input type="text" class="form-control" id="username_input" name="username" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label for="email_input">Username</label>
+    <input type="email" class="form-control" id="email_input" name="email" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="password_1_input">Password</label>
+    <input type="password" class="form-control" id="password_1_input" name="password_1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="password_2_input">Password</label>
+    <input type="password" class="form-control" id="password_2_input" name="password_2" placeholder="Confirm password">
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
+<div>
+  {% for message in messages %}
+    <h3 class="text-center text-danger"> {{message}} </h3>
+  {% endfor %}
+</div>
+{% endblock %}
